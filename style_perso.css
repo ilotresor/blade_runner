@@ -1,0 +1,320 @@
+@font-face {
+    font-family:"BLADRMF_";
+    src:
+         url("fonts/BLADRMF_.TTF") format("truetype");
+        
+    }
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+}
+
+.navbar nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'BLADRMF_';
+    text-decoration: none;
+    display: block;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    font-family: 'BLADRMF_';
+}
+
+.navbar nav ul li a:hover {
+    color: #27AFFF;
+}
+
+.menu-toggle {
+    display: none;
+  }
+  
+  /* Mobile Styles - Display Hamburger Menu */
+  @media screen and (max-width: 768px) {
+    .navbar nav {
+      display: none; /* Hide the navigation by default */
+      position: relative;
+      right: 0;
+      top: 60px; /* Position the menu below the navbar */
+      background-color: #000;
+      width: 100%;
+      text-align: center;
+      padding-top: 20px;
+    }
+  
+    /* When the checkbox is checked, display the navigation */
+    .menu-toggle:checked + .menu-icon + nav {
+      display: block;
+    }
+  
+    .navbar nav ul {
+      flex-direction: column; /* Stack nav items vertically */
+      gap: 20px;
+    }
+  
+    /* Style the hamburger menu icon */
+    .menu-icon {
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+    }
+  
+    .menu-icon:hover {
+      color: #27AFFF;
+    }
+  
+    .navbar nav ul li a {
+      font-size: 22px; /* Larger font for readability */
+    }
+  }
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+
+}
+
+section{
+    position: relative;
+    width:100%;
+    height: 100vh;
+    display:flex;
+    border: 2px solid #000;
+
+}
+
+.slide {
+    position: relative;
+    background:#27AFFF;
+    height: 100%;
+    flex:1;
+    border-right: 2px solid #000;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.slide:last-child {
+    border-right: none;
+}
+
+
+section .slide:hover {
+
+    flex-grow: 4;
+}
+
+#characters .slide:nth-child(1) {
+    background: url(img/characters/k.png);
+    background-size: cover; 
+    background-position: center;
+    animation: background 1.5s step-end;
+}
+
+#characters .slide:nth-child(1):hover {
+    background: url(img/characters/k.webp);
+    background-size: cover; 
+    background-position: center;
+}
+
+#characters .slide:nth-child(2) {
+    background: url(img/characters/joi.png);
+    background-size: cover; 
+    background-position: center;
+    animation: background 1.5s step-end;
+}
+
+#characters .slide:nth-child(2):hover {
+    background: url(img/characters/joi.gif);
+    background-size: cover; 
+    background-position: center;
+}
+
+#characters .slide:nth-child(3) {
+    background: url(img/characters/deckard.jpg);
+    background-size: cover; 
+    background-position: center;
+}
+
+#characters .slide:nth-child(4) {
+    background: url(img/characters/rachel.png);
+    background-size: cover; 
+    background-position: center;
+    animation: background 1.5s step-end;
+}
+
+#characters .slide:nth-child(4):hover {
+    background: url(img/characters/rachel.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+#characters .slide:nth-child(5) {
+    background: url(img/characters/ana.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: background 1.5s step-end;
+}
+
+#characters .slide:nth-child(6) {
+    background: url(img/characters/luv.jpg);
+    background-size: cover; 
+    background-position: center;
+}
+
+
+
+
+.slide .content {
+    position: absolute;
+    bottom:40px;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7); 
+    text-decoration: none;
+    border-radius: 1px;
+    border-style: solid;
+    border-color:rgb(24, 24, 24);
+    transition: all 0.4s ease; 
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(0px);
+}
+.slide .content h2{
+    color:rgb(240, 219, 30);
+    font-family: 'BLADRMF_';
+}
+
+.slide:hover .content {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    transform: translateY(0);
+}
+.slide:hover .content h2 {
+    color:rgb(240, 219, 30);
+    font-family: 'BLADRMF_';
+}
+
+section#cast .intro {
+    position: relative;
+    width: 100%;
+    background: black; /* Slightly dark background */
+    color: white;
+    text-align: center;
+    background-image: url('img/skull.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0;
+    padding:0;
+}
+
+section#cast .intro h1 {
+    font-family: 'BLADRMF_';
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+section#cast .intro p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+#cast .slide:nth-child(1) {
+    background: url(img/cast/ryan.jpg);
+    background-size: cover; 
+    background-position: center;
+}
+
+#cast .slide:nth-child(2) {
+    background: url(img/cast/anaa.webp);
+    background-size: cover; 
+    background-position: center;
+}
+
+#cast .slide:nth-child(3) {
+    background: url(img/cast/ford.jpg);
+    background-size: cover; 
+    background-position: center;
+}
+
+#cast .slide:nth-child(4) {
+    background: url(img/cast/young.webp);
+    background-size: cover; 
+    background-position: center;
+}
+
+#cast .slide:nth-child(5) {
+    background: url(img/cast/juri.webp);
+    background-size: cover; 
+    background-position: center;
+}
+
+#cast .slide:nth-child(6) {
+    background: url(img/cast/hoeks.webp);
+    background-size: cover; 
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    /* For small screens, reduce padding for mobile devices */
+   
+    .slide .content {
+        max-height:60%;
+
+        padding-bottom: none;
+      }
+
+    .slide .content h2 {
+      font-size: 1em;
+      top:0;
+      bottom:0;
+      padding:none;
+    }
+  
+    .slide .content p {
+      font-size: 0.8em;
+      padding:none;
+    }
+  }
