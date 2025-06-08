@@ -1,0 +1,372 @@
+
+
+
+
+@font-face {
+    font-family:"BLADRMF_";
+    src:
+         url("fonts/BLADRMF_.TTF") format("truetype");}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', 'sans-serif';
+}
+
+p{
+    font-family:'Lato';
+    font-size: large;
+}
+
+body {
+    background-color:#0c0800;
+    color:#fff;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(7, 4, 0, 0.7);
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    
+}
+
+.navbar nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'BLADRMF_';
+    text-decoration: none;
+    display: block;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    font-family: 'BLADRMF_';
+}
+
+.navbar nav ul li a:hover {
+    color: #27AFFF;
+}
+
+.menu-toggle {
+    display: none;
+  }
+  
+  /* Mobile Styles - Display Hamburger Menu */
+  @media screen and (max-width: 768px) {
+    .navbar nav {
+      display: none; /* Hide the navigation by default */
+      position: absolute;
+      right: 0;
+      top: 60px; /* Position the menu below the navbar */
+      background-color: #000;
+      opacity: 2;
+      width: 100%;
+      text-align: center;
+      padding-top: 20px;
+    }
+  
+    /* When the checkbox is checked, display the navigation */
+    .menu-toggle:checked + .menu-icon + nav {
+      display: block;
+    }
+  
+    .navbar nav ul {
+      flex-direction: column; /* Stack nav items vertically */
+      gap: 20px;
+    }
+  
+    /* Style the hamburger menu icon */
+    .menu-icon {
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+    }
+  
+    .menu-icon:hover {
+      color: #27AFFF;
+    }
+  
+    .navbar nav ul li a {
+      font-size: 22px; /* Larger font for readability */
+    }
+  }
+
+.hero {
+    
+    height: 100vh;
+    background-image: url('img/desert.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    font-family: 'BLADRMF_', sans-serif;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cta {
+    background-color:rgba(255, 255, 255, 0.5) ;
+    padding: 5px 30px;
+    color: rgb(10, 10, 10);
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 1px;
+    border-style: solid;
+    border-color: white;
+    transition: all 0.4s ease;
+    position: relative;
+    margin-top: 20px;
+}
+
+.cta:hover {
+    background-color: #fff01c;
+    color: #000000;
+    border-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.cta:visited,
+.cta:active {
+    color: rgb(255, 255, 255); /* Ensures the visited link retains the original color */
+    text-decoration: none; /* Keeps no underline */
+}
+
+.hero .cta {
+    background-color: transparent;
+    padding: 15px 30px;
+    top:30px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 1px;
+    border-style: 2px solid; 
+    transition: all 0.3s ease; 
+    position: relative;
+}
+
+.hero .cta:hover {
+    background-color: #27AFFF;
+    color: #fff;
+    border-color: #27AFFF; 
+    transform: translateY(-3px); 
+}
+
+
+.hero .cta:hover {
+    box-shadow: 0 4px 10px rgba(39, 175, 255, 0.5);
+}
+
+
+
+.section {
+    height: 100vh;
+    padding: 60px 20px;
+    text-align: center;
+    background-color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 auto;
+
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family:'Orbitron';
+}
+
+
+
+#introduction {
+    background:#000;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh;
+}
+
+#nominations{
+    background-image: url('img/yellow_flying.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    
+    
+}
+#nominations p {
+    letter-spacing: 4px;
+    line-height: auto;
+}
+
+#nominations h2 {
+    letter-spacing: normal; 
+    line-height: auto;
+}
+#nominations .logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+#nominations .logos a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    max-width: 150px;
+    height: 150px;
+    color: inherit; 
+    text-decoration: none; 
+}
+
+#nominations .logos a:visited,
+#nominations .logos a:hover,
+#nominations .logos a:active {
+    color: inherit; /* Ensures no color change */
+    text-decoration: none; /* Keeps no underline */
+}
+
+
+
+#nominations .logos img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#bladerunner {
+    background-image: url('img/bladerunner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh;
+}
+
+#director{
+    background-image: url('img/denis_villeneuve.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh;
+}
+
+
+
+
+#synopsis {
+    
+    background-image: url('img/eyes.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
+    height: 100vh;
+    
+}
+
+
+
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+
+body {
+    scroll-behavior: smooth;
+}
+
+header.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+header.navbar.scroll {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+body:has(.scroll) header.navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero {
+        background-position:center;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+    }
+
+    .navbar nav ul li a {
+        font-size: 16px;
+    }
+    #bladerunner {
+        object-fit:fill;
+        background-position:center;
+    }
+}
+
+    
+
+   
+

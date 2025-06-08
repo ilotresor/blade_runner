@@ -1,0 +1,239 @@
+@font-face {
+    font-family:"BLADRMF_";
+    src:
+         url("fonts/BLADRMF_.TTF") format("truetype");
+        
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Lato', 'sans-serif';
+
+  }
+  
+  p {
+    font-size: 1.1em;
+  }
+
+  
+  body {
+      background-color:#222;
+      color:#fff;
+      line-height: 1.6;
+  }
+  
+  header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      transition: background-color 0.3s ease;
+  }
+  
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color:  rgba(0, 0, 0, 0.7);
+      z-index: 999;
+  }
+  
+  .navbar nav {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .navbar .logo a {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'BLADRMF_';
+      text-decoration: none;
+      display: block;
+  }
+  
+  .navbar nav ul {
+      list-style-type: none;
+      display: flex;
+      gap: 100px;
+      justify-content: center;
+  }
+  
+  .navbar nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+      font-family: 'BLADRMF_';
+  }
+  
+  .navbar nav ul li a:hover {
+      color: #27AFFF;
+  }
+  
+
+    /* Mobile Styles - Display Hamburger Menu */
+    @media screen and (max-width: 768px) {
+      .navbar nav {
+        display: none; /* Hide the navigation by default */
+        position: absolute;
+        right: 0;
+        top: 60px; /* Position the menu below the navbar */
+        background-color: #000;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+      }
+    
+      /* When the checkbox is checked, display the navigation */
+      .menu-toggle:checked + .menu-icon + nav {
+        display: block;
+      }
+    
+      .navbar nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 20px;
+      }
+    
+      /* Style the hamburger menu icon */
+      .menu-icon {
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+      }
+    
+      .menu-icon:hover {
+        color: #27AFFF;
+      }
+    
+      .navbar nav ul li a {
+        font-size: 22px; 
+      }
+    }
+
+    .content {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+   .content img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .content .text {
+      position: absolute;
+      top:20%;
+      width:1148px;
+      max-width: 50%;
+      left: 35%;
+      right: 0;
+      transform: translateX(-50%);
+      padding-right:30%;
+      padding: 10px;
+      box-sizing: border-box;
+      background: rgba(0, 0, 0, 0.4);
+      border-color: none;
+    } 
+
+ .content .text h2 {
+      font-size: 2rem; 
+      margin-bottom: 1rem;
+      font-family: 'Orbitron';
+    }
+
+    .content .text p {
+  font-size: 1.2em; 
+  line-height: 1.5;
+  
+}
+#bvn {
+  margin-top: 60px;
+  box-sizing: border-box;
+  color:rgba(255, 255, 255, 0.932);
+}
+
+#bvn .video-background {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Send it behind content */
+}
+
+#bvn .video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+#replicant .video-background {
+  position: relative;
+
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Send it behind content */
+}
+
+#replicant .video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
+
+
+#skinner .video-background {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Send it behind content */
+}
+
+#skinner .video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers entire area */
+}
+#skinner p,
+#skinner h2 {
+  color: #ffffff;
+  text-shadow: #000;
+}
+
+
+
+@media (max-width: 768px) {
+  /* For small screens, reduce padding for mobile devices */
+  .theme-box {
+   max-width: 30%;
+   height: auto;
+  }
+
+
+  .content .text h2 {
+    font-size: 1.2rem;
+  }
+
+  .content .text p {
+    font-size: 0.9rem;
+  }
+}

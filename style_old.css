@@ -1,0 +1,206 @@
+body {
+    background: #0c0c0c;
+}
+
+p{
+    font-family: 'Lato';
+}
+
+/* Movie Info Section */
+.movie-info {
+    background-color: #000000;
+    margin: 40px 20px;
+    text-align: center;
+  }
+  
+  .movie-info h2 {
+    font-size: 2.5rem;
+    color: #f3f3f3;
+    margin-bottom: 20px;
+  }
+  
+  /* Movie Info Content Layout */
+  .movie-info-content {
+    display: grid;
+    grid-template-columns:1fr; /* Two columns by default */
+    gap: 20px;
+  }
+
+
+  
+  /* Resume Section */
+  .resume {
+    background-color: #0e0e0e;
+    border-radius: 10px;
+    padding-left: 20%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .resume h2 {
+    font-size: 1.8rem;
+    color: #f3f3f3;
+    margin-bottom: 10px;
+  }
+  
+  .resume p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  /* Trailer Section */
+  .trailer {
+    background-color: #030303;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .trailer iframe {
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    /* For medium screens (tablets), make it a single column */
+    .movie-info-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* For smaller screens (phones), adjust padding and text sizes */
+    .resume {
+      padding: 15px;
+    }
+  
+    .resume h2 {
+      font-size: 1.5rem;
+    }
+  
+    .resume p {
+      font-size: 0.9rem;
+    }
+  
+    .trailer {
+      padding: 15px;
+    }
+  
+    .trailer iframe {
+      height: 250px; /* Make the video smaller on mobile */
+    }
+  }
+  
+
+
+
+
+
+.themes {
+    text-align: center;
+    margin: 40px 20px;
+  }
+  
+  .themes h2 {
+    font-size: 2.5rem;
+    color: #f3f3f3;
+    margin-bottom: 40px;
+  }
+  
+  /* Themes Grid Layout */
+  .themes-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default to 2 columns */
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  /* Theme Box Style */
+  .theme-box {
+    background: #03000f;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 2px solid #252525; /* Adding border for clearer separation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional, for a 3D effect */
+  }
+  .pvl-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+    gap: 20px; /* Adjust the space between the columns */
+}
+
+.pvl {
+    background-color: hsl(235, 100%, 2%);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+ /* Video Background */
+#joi .video-background {
+    position: relative;
+    width: 100%;
+    height: 600px; /* You can adjust the height here */
+    overflow: hidden;
+  }
+  
+  #joi .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -1; /* Ensure the video stays behind the text */
+  }
+  
+  /* Box Text Styling */
+  .theme-box .text {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 80%;
+    color: rgb(255, 227, 66);
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7); /* Optional, for text readability */
+  }
+  
+  .theme-box .text h3 {
+    font-size: 1rem;
+    text-align: top;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .theme-box .text p {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+
+
+
+
+
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    /* For medium screens, make it a single column */
+    .themes-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* For small screens, reduce padding for mobile devices */
+    .theme-box {
+      padding: 15px;
+    }
+  
+    .theme-box h3 {
+      font-size: 1.3rem;
+    }
+  
+    .theme-box p {
+      font-size: 0.9rem;
+    }
+  }
+  
